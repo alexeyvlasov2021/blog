@@ -1,0 +1,20 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the page</title>
+</head>
+<body> -->
+    <%- include("partials/header.ejs") %>
+    <!-- <h1>the id is <%=// id %></h1> -->
+     <div class="p-4">
+        <h2><%= array[id].title %></h2>
+        <p><%= array[id].text %></p>
+        <br>
+        <a href="/edit?id=<%=id%>">edit the article </a>
+     </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Home Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link text-secondary" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-secondary">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-secondary">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-secondary">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-secondary">About</a></li>
+      </ul>
+    </header>
+  </div> -->
+  
+  <%- include("partials/header.ejs") %>
+
+  <ul class="list-group list-group-flush titles-list">
+  <%   if(locals.array){%>
+    <% for(let i=0; i<array.length; i++){%>
+      <li class="list-group-item"><a href="/page?id=<%=i%>" class="title-list text-secondary"><%= array[i].title%></a></li>
+      <%  }%>
+      <% if(array.length === 0){%>
+        <p class="pl-4">No articles available</p>
+        <% }%>
+      <%}%>
+  </ul>
+  </br><a href="/new" class="pl-4 nav-link">add new article</a>
+
+  <script>
+    for(let i=0; i< document.getElementsByTagName("a").length; i++){
+      if(document.getElementsByTagName("a")[i].innerText.length >20){
+        let newStr = document.getElementsByTagName("a")[i].innerText.slice(0, 19)+"...";
+        document.getElementsByTagName("a")[i].innerText = newStr;
+      }
+    }
+  </script>
+</body>
+</html>

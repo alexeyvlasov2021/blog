@@ -1,0 +1,23 @@
+
+.titles-list{
+    width: 250px; 
+}
+
+/* input[type=text] {
+    width: 45%;
+    height: 150px;
+    margin-bottom: 20px;
+    text-align: left; 
+    padding-left: 10px; 
+    box-sizing: border-box; 
+    white-space: pre-wrap; 
+     */
+
+
+label{
+    padding-top: 20px;
+}
+
+a.title-list:hover{
+    text-decoration: none;
+}

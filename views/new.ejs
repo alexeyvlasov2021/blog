@@ -1,0 +1,21 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new article</title>
+</head>
+<body> -->
+    <%- include("partials/header.ejs") %>
+    <form action="/add" method="post" class="p-4">
+        <label for="title">The title:</label><br>
+        <textarea name="title" rows="5" cols="30"></textarea><br>
+        <!-- <input type="text" name="title"><br> -->
+
+        <label for="text">Artcile text:</label><br>
+        <textarea name="text" rows="10" cols="30"></textarea><br>
+        <!-- <input type="text" name="text"><br> -->
+        <input type="submit" value="Submit" class="btn btn-success">
+    </form>
+</body>
+</html>

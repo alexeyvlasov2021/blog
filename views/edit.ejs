@@ -1,0 +1,28 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit page</title>
+</head>
+<body> -->
+
+    <!-- <h1>the id is <%= //id %></h1>
+    <h2>the title is <%=// array[id].title %></h2>
+    <p><%= //array[id].text %></p>
+    <br> -->
+<%- include("partials/header.ejs") %>
+    <form action="/save" method="post" class="p-4">
+        <label for="title">The title:</label><br>
+        <textarea name="title" rows="5" cols="30"><%= array[id].title %></textarea><br>
+        <label for="text">Artcile text:</label><br>
+
+        <textarea name="text" rows="10" cols="30"><%= array[id].text %></textarea><br>
+        <input type="hidden" name="id" value="<%= id %>">
+        <input type="submit" value="Submit" class="btn btn-success">
+        <input type="submit" value="Delete" formaction="/delete" class="btn btn-danger">
+        <!-- <button type="submit" formaction="/delete">Delete</button> -->
+    </form>
+    
+</body>
+</html>
